@@ -1,0 +1,22 @@
+.card, .card-box {
+	font-size: 15px;
+	box-shadow: 0 0 6px 0 rgba(101, 122, 145, 0.15);
+	a {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: none;
+			/*border:0;*/
+		}
+	}
+}
+.card-title {
+	font-size: 16px;
+}
+.gdx-card_general-info {
+	strong {
+		font-size: 18px;
+	}
+}

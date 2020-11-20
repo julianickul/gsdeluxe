@@ -1,0 +1,43 @@
+.svg-hidden {
+  visibility: hidden;
+  display: none;
+  width:0;
+  height:0;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+  }
+}
+a{
+  &:focus {
+    outline: none;
+    border:0;
+  }
+}
+.gdx-text-nobreaks {
+  white-space: nowrap;
+}
+
+/******************************************************/
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+/* button:focus,
+button:active,
+button:hover, */
+label:focus,
+.custom-select {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+  }

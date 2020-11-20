@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./blocks/layout/head/_head_common.html')
+
+        <!-- Plugins css -->
+        <link href="assets/libs/select2/select2.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        @@include('./blocks/layout/gsd_sprite.html')
+        <!-- Navigation Bar-->
+        <header id="topnav" class="topnav">
+            @@include('./blocks/layout/topbar.html')
+            @@include('./blocks/layout/horizontal-nav.html')
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+                @@include('./blocks/breadcrumbs/_launcher_options.html')
+
+                <!-- Launcher Options Start -->
+                <div class="card-box">
+                    <form class="form_fields_fixed">
+                        <div class="form-row align-items-end mb-2">
+                            <div class="col-auto mb-2">
+                                <label class="col-form-label" for="">Load options from template</label>
+                                <select class="custom-select custom-select-sm">
+                                    <option value="0" selected>Select template</option>
+                                    <option value="1">Template 1</option>
+                                    <option value="2">Template 2</option>
+                                    <option value="3">Template 3</option>
+                                </select>
+                            </div>
+                            <div class="col-auto mb-2">
+                                <select class="custom-select custom-select-sm">
+                                    <option selected>For club</option>
+                                    <option value="0">Select template</option>
+                                    <option value="1">For club</option>
+                                    <option value="2">For club</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <ul class="nav nav-tabs nav-tabs_launcher-options" id="launcherOptions" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="system-tab" data-toggle="tab" href="#system" role="tab" aria-controls="system" aria-selected="true">System</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="false">Video</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="launcher-tab" data-toggle="tab" href="#launcher" role="tab" aria-controls="launcher" aria-selected="false">Launcher</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="interface-tab" data-toggle="tab" href="#interface" role="tab" aria-controls="interface" aria-selected="false">Interface</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="jackpot-tab" data-toggle="tab" href="#jackpot" role="tab" aria-controls="jackpot" aria-selected="false">Jackpot</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="games-tab" data-toggle="tab" href="#games" role="tab" aria-controls="games" aria-selected="false">Games</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="acceptor-tab" data-toggle="tab" href="#acceptor" role="tab" aria-controls="acceptor" aria-selected="false">Acceptor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="dispenser-tab" data-toggle="tab" href="#dispenser" role="tab" aria-controls="dispenser" aria-selected="false">Dispenser</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="printer-tab" data-toggle="tab" href="#printer" role="tab" aria-controls="printer" aria-selected="false">Printer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="VLT-tab" data-toggle="tab" href="#VLT" role="tab" aria-controls="VLT" aria-selected="false">VLT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="keyboard-tab" data-toggle="tab" href="#keyboard" role="tab" aria-controls="keyboard" aria-selected="false">Keyboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="VS-tab" data-toggle="tab" href="#VS" role="tab" aria-controls="VS" aria-selected="false">VS</a>
+                            </li>
+                        </ul>
+                    
+                        <div class="tab-content" id="launcherOptionsContent">
+                            <div class="tab-pane fade show active" id="system" role="tabpanel" aria-labelledby="system-tab">
+                                @@include('./blocks/tabs/_system.html')
+                            </div>
+                            <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+                                @@include('./blocks/tabs/_video.html')
+                            </div>
+                            <div class="tab-pane fade" id="launcher" role="tabpanel" aria-labelledby="launcher-tab">
+                                @@include('./blocks/tabs/_launcher.html')
+                            </div>
+                            <div class="tab-pane fade" id="interface" role="tabpanel" aria-labelledby="interface-tab">
+                                @@include('./blocks/tabs/_interface.html')
+                            </div>
+                            <div class="tab-pane fade" id="jackpot" role="tabpanel" aria-labelledby="jackpot-tab">
+                                @@include('./blocks/tabs/_jackpot.html')
+                            </div>
+                            <div class="tab-pane fade" id="games" role="tabpanel" aria-labelledby="games-tab">
+                                @@include('./blocks/tabs/_games.html')
+                            </div>
+                            <div class="tab-pane fade" id="acceptor" role="tabpanel" aria-labelledby="acceptor-tab">
+                                @@include('./blocks/tabs/_acceptor.html')
+                            </div>
+                            <div class="tab-pane fade" id="dispenser" role="tabpanel" aria-labelledby="dispenser-tab">
+                                @@include('./blocks/tabs/_dispenser.html')
+                            </div>
+                            <div class="tab-pane fade" id="printer" role="tabpanel" aria-labelledby="printer-tab">
+                                @@include('./blocks/tabs/_printer.html')
+                            </div>
+                            <div class="tab-pane fade" id="VLT" role="tabpanel" aria-labelledby="VLT-tab">
+                                @@include('./blocks/tabs/_VLT.html')
+                            </div>
+                            <div class="tab-pane fade" id="keyboard" role="tabpanel" aria-labelledby="keyboard-tab">
+                                @@include('./blocks/tabs/_keyboard.html')
+                            </div>
+                            <div class="tab-pane fade" id="VS" role="tabpanel" aria-labelledby="VS-tab">
+                                @@include('./blocks/tabs/_VS.html')
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-end my-3">
+                            <div class="col-md-auto">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="doForAllTerminals">
+                                    <label class="custom-control-label" for="doForAllTerminals">Do for all terminals in club</label>
+                                </div>
+                            </div>
+                            <div class="col-md-auto">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="saveChanged">
+                                    <label class="custom-control-label" for="saveChanged">Save changed options only</label>
+                                </div>
+                            </div>
+                            <div class="col-md-auto">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="saveAsTemplate">
+                                    <label class="custom-control-label" for="saveAsTemplate">Save as template</label>
+                                </div>
+                            </div>
+                            <div class="col-md-auto">
+                                <label class="col-form-label" for="">Template name</label>
+                                <input type="text" class="form-control form-control-sm">
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-sm-auto">
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Launcher Options End -->
+                
+            </div> <!-- end container -->
+        </div><!-- end wrapper -->
+
+        
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+        @@include('./blocks/layout/footer.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <script src="assets/libs/select2/select2.min.js"></script>
+
+        <script>
+            jQuery(document).ready(function () {
+                $(".select2").select2();
+            })
+        </script>
+
+        <!-- App js-->
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>

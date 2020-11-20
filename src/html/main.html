@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./blocks/layout/head/_head_common.html')
+
+        <!-- Plugins css -->
+        <!--<link href="assets/libs/tablesaw/tablesaw.css" rel="stylesheet" type="text/css" />-->
+    
+        <!-- App css -->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        @@include('./blocks/layout/gsd_sprite.html')
+        <!-- Navigation Bar-->
+        <header id="topnav" class="topnav">
+            @@include('./blocks/layout/topbar.html')
+            @@include('./blocks/layout/horizontal-nav.html')
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+                @@include('./blocks/breadcrumbs/_main.html')
+
+                <div class="row">
+                    <div class="col-md-6">
+                        @@include('./blocks/cards/_generate_code.html')
+                    </div>
+
+                    <div class="col-md-6 ">
+                        @@include('./blocks/cards/_code_to_money.html')
+                    </div>
+                </div>
+
+                @@include('./blocks/cards/_general_info_1.html')
+
+                <div class="card-box">
+                    <h4 class="card-title">ID</h4>
+                    @@include('./blocks/tables/_treetable_id.html')
+                </div>
+
+            </div> <!-- end container -->
+        </div><!-- end wrapper -->
+
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+        @@include('./blocks/layout/footer.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- Tablesaw js -->
+        <!--init tree structure for main page only -->
+        <script src="assets/js/pages/jquery.treetable.js"></script>
+        <script>
+            $("#treetbl_id").treetable({ expandable: true });
+        </script>
+        <!--init toggle columns on small screens-->
+        <script src="assets/js/pages/gdx-table.js"></script>
+        <script src="assets/js/pages/gdx-table.init.js"></script>
+
+        <!-- App js-->
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>

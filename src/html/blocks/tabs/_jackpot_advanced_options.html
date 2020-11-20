@@ -1,0 +1,91 @@
+<!-- Jackpot Advanced Options Tab Start -->
+<div class="form-horizontal form_fields_fixed">
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="">Jackpot new bank amount</label>
+		<div class="col-sm-6 col-md-8">
+			<input type="text" class="form-control form-control-sm" value="0">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="">Last purchase minimal value (0 - any value)</label>
+		<div class="col-sm-6 col-md-8">
+			<input type="text" class="form-control form-control-sm" value="0">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="">Minimal terminals count from all jackpot clubs to hit the jackpot (min 1)<span class="form-label__sub">(Count of active terminals, on which people played, to hit the jackpot)</span></label>
+		<div class="col-sm-6 col-md-8">
+			<input type="text" class="form-control form-control-sm" value="1">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="">Jackpot hit frequency (from 0.01 to 1)</label>
+		<div class="col-sm-6 col-md-8">
+			<input type="text" class="form-control form-control-sm" value="0.01">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="">Minimal bet for jackpot hit</label>
+		<div class="col-sm-6 col-md-8">
+			<input type="text" class="form-control form-control-sm" value="0">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="">Jackpot winner'steerminal number</label>
+		<div class="col-sm-6 col-md-8">
+			<select class="custom-select custom-select-sm">
+				<option>Any</option>
+				<option>10</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="">Jackpot hit period (hour, from 0 to 23) (Hour)<span class="form-label__sub">(Day time when jackpot can be hit, based on server time)</span></label>
+		<div class="form-group col gdx_col_period">
+			<label class="col-form-label" for="">From:</label>
+			<div class="input-group">
+				<input type="text" class="form-control form-control-sm" value="0">
+				<div class="input-group-append">
+					<span class="pl-1 my-auto">.00</span>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col gdx_col_period">
+			<label class="col-form-label" for="">To:</label>
+			<div class="input-group">
+				<input type="text" class="form-control form-control-sm" value="0">
+				<div class="input-group-append">
+					<span class="pl-1 my-auto">.59</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="chbk0">Enable jackpot hit after accumulation start hit amount</label>
+		<div class="col-sm-6 col-md-8">
+			<div class="custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input" id="chbk0">
+				<label class="custom-control-label" for="chbk0"></label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="chbk1">Activation - allows to show this jackpot on terminal and begin to fill bank</label>
+		<div class="col-sm-6 col-md-8">
+			<div class="custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input" id="chbk1" checked="checked">
+				<label class="custom-control-label" for="chbk1"></label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-sm-6 col-md-4 col-form-label" for="chbk2">Allow payment - allow jackpot to hit (Jackpot payment allowed only if jackpot bank volume is full. Jackpot payment don't affect credit and club's counters)<span class="form-label__sub">Not enough credits in Jackpot bank for allow jackpot payment (bank amount minus terminals credits and taking into account bank amount of next Jackpot)</span><a href="">More information</a></label>
+		<div class="col-sm-6 col-md-8">
+			<div class="custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input" id="chbk2">
+				<label class="custom-control-label" for="chbk2"></label>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Jackpot Advanced Options Tab End -->

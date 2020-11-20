@@ -1,0 +1,100 @@
+.definition-box {
+	display: flex;
+    flex-flow: column wrap;
+	justify-content: space-between;
+	/*&::before,
+	&::after {
+		content: "";
+		flex-basis: 100%;
+		width: 0;
+		order: 2;
+	}*/
+}
+.definition-box_view-row {
+	flex-direction:column;
+}
+@include media-breakpoint-up(md) {
+	.definition-box_view-row {
+		flex-direction:row;
+		.definition {
+			width: 46%;
+		}
+	}
+}
+@include media-breakpoint-up(lg) {
+	.definition-box_view-row {
+		.definition {
+			width: auto;
+			dt {
+				margin-right:40px;
+			}
+		}
+	}
+}
+@include media-breakpoint-up(xl) {
+	.definition-box_view-row {
+		.definition {
+			dt {
+				margin-right:94px;
+			}
+		}
+	}
+}
+.definition {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0;
+	margin: 9px 0;
+	width: 100%;
+	dt, dd {
+		padding: 0;
+		margin: 0;
+	}
+	dt {
+		padding: 0;
+		font-weight: normal;
+	}
+	dd {
+		font-size: 18px;
+		font-weight: 600;
+		font-family: $font-family-secondary;
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+
+.definition-box_view-columns {
+	.definition {
+		width: 100%;
+	}
+}
+// for wide columns
+@include media-breakpoint-up(sm) {
+	.definition-box_view-columns {
+		max-height: 200px;
+		.definition {
+			width: 45%;
+		}
+	}
+}
+
+.modal {
+	.definition-box {
+		flex-direction: column;
+	}
+}
+@include media-breakpoint-up(sm) {
+	.modal {
+		.definition-box {
+			flex-flow: row wrap;
+		}
+		.definition {
+			display: block;
+			width: 30%;
+			dt, dd {
+				text-align: left;
+			}
+		}
+	}
+}

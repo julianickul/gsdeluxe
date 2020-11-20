@@ -1,0 +1,148 @@
+<!-- Cashtable Modal Start -->
+<div class="modal fade gdx-cash-table-modal" id="cashtableModal" tabindex="-1" role="dialog" aria-labelledby="cashtableModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="cashtableModalLabel">Terminal 301523 (1)</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<div class="modal-body">
+				<div class="alert alert-success" role="alert">1 RUB added</div>
+				<div class="alert alert-danger" role="alert">Error</div>
+
+				<div class="definition-box">
+					<dl class="definition">
+						<dt>Entries Balance</dt>
+						<dd><span class="text-danger">0</span></dd>
+					</dl>
+					<dl class="definition">
+						<dt>Denomination</dt>
+						<dd>1</dd>
+					</dl>
+					<dl class="definition">
+						<dt>With denomination</dt>
+						<dd>1 Rub</dd>
+					</dl>
+				</div>
+
+				
+				<ul class="nav nav-tabs " id="myTab" role="tablist">
+					<li class="nav-item">
+						<!--<a href="#home1" data-toggle="tab" aria-expanded="false" class="nav-link active"></a>-->
+						<a class="nav-link active" id="entries-tab" data-toggle="tab" href="#entries" role="tab" aria-controls="entries" aria-selected="true">Add entries</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="prizes-tab" data-toggle="tab" href="#prizes" role="tab" aria-controls="prizes" aria-selected="false">Take Prizes</a>
+					</li>
+				</ul>
+
+					
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="entries" role="tabpanel" aria-labelledby="entries-tab">
+
+						<div class="row entries-list mb-4">
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">1</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">2</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">5</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">10</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">20</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">50</button>
+							</div>
+						</div>
+						<div class="row mb-3 align-items-center">
+							<label class="col-md-4 col-form-label" for="">Available denominations</label>
+							<div class="col-md-8">
+								<select class="custom-select custom-select-sm">
+									<option selected>0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+						</div>
+						<div class="row entries-list mb-3">
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">100</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">200</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">500</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">1000</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">2000</button>
+							</div>
+							<div class="entries-list__item">
+								<button type="button" class="btn btn-secondary btn-rounded waves-effect">5000</button>
+							</div>
+						</div>
+
+						<div class="row pt-3">
+							<label class="col-md-4 col-form-label" for="">Add entries</label>
+							<div class="col-6 col-md-4">
+								<select class="custom-select custom-select-sm">
+									<option selected>0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+							<div class="col-6 col-md-4">
+								<input type="text" class="form-control form-control-sm">
+							</div>
+						</div>
+
+					</div>
+
+					<div class="tab-pane fade" id="prizes" role="tabpanel" aria-labelledby="prizes-tab">
+						<div class="row">
+							<label class="col-md-3 col-form-label" for="">Take prizes</label>
+							<div class="col-md-4">
+								<select class="custom-select custom-select-sm">
+									<option selected>0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+							</div>
+							<div class="col-md-4">
+								<div class="custom-control custom-checkbox mt-1">
+									<input type="checkbox" class="custom-control-input" id="takeAllPrizesCheck">
+									<label class="custom-control-label" for="takeAllPrizesCheck">Take all Prizes</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="row modal-footer">
+				<div class="col-6 col-sm-auto">
+					<button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>
+				</div>
+				<div class="col-6 col-sm-auto">
+					<button type="button" class="btn btn-primary w-100" data-dismiss="modal">Refresh</button>
+				</div>
+				<div class="col-12 col-sm-auto order-first order-sm-0 mb-2 mb-sm-0">
+					<button type="button" class="btn btn-success w-100">Add entries</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Cashtable Modal End -->

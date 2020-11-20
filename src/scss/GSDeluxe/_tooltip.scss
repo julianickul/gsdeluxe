@@ -1,0 +1,27 @@
+.tooltip {
+	.arrow {
+		&::after {
+			z-index: 1;
+			position: absolute;
+			content: "";
+		}
+	}
+	.tooltip-inner {
+		border:1px solid #ebeff2;
+		text-align: left;
+	}
+}
+.bs-tooltip-auto[x-placement^=right] .arrow,
+.bs-tooltip-right .arrow {
+	&::before {
+		z-index: 2;
+		right:-1px;
+	}
+	
+	&::after {
+		right: 0;
+    	border-width: .8rem .8rem .8rem 0;
+		border-style: solid;
+		border-color:transparent #ebeff2 transparent transparent;
+	}
+}

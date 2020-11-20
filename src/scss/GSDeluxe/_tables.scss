@@ -1,0 +1,269 @@
+.tbl-toggle {
+	position: absolute;
+	top:8px;
+	left:5px;
+	display: none;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+}
+
+
+/*_______________ Customization for certain tables _______________*/
+.gdx-tbl-changepass {
+	.input-group {
+		max-width: 192px;
+		min-width: 172px;
+	}
+	.form-control {
+		max-width: 150px;
+		min-width: 130px;
+	}
+}
+.gdx-changepass-box {
+	display: inline-flex;
+	align-items:center;
+	max-width: 200px;
+	min-width:100px;
+}
+
+/* GDX Table > */
+.gdx-table_responsive {
+	width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+.gdx-row-title {
+	width:50%;
+	font-weight:500;
+	padding-right:10px;
+	display: none;
+	box-sizing: border-box;
+}
+
+.gdx-table {
+	width: 100%;
+	color: #323a46;
+	font-size:13px;
+	text-align: left;
+	thead {
+		th {
+			background-color: #ebeff2;
+			border:1px solid #ced4da;
+			border-width:1px 0;
+			font-weight: 500;
+			vertical-align: top;
+			&:first-child {
+				border-left: 1px solid #ced4da;
+				border-top-left-radius: 4px;
+			}
+			&:last-child {
+				border-right: 1px solid #ced4da;
+				border-top-right-radius: 4px;
+			}
+		}
+	}
+	td, th {
+		padding: 10px;
+		&:first-child {
+			padding-left: 40px;
+			position: relative;
+		}
+	}
+
+	td {
+		position: relative;
+		border-top: 1px solid #ced4da;
+	}
+	tfoot {
+		td {
+			font-weight: bold;
+		}
+	}
+}
+.gdx-table[data-table-collapsed="1"] {
+	tr {
+		display: grid;
+		width: 100%;
+	}
+	.tbl-toggle {
+		display: block;
+		@include sprite('ic-plus-table');
+	}
+	tr[data-row-showall="1"]{
+		.tbl-toggle {
+			@include sprite('ic-minus-table');
+		}
+	}
+	tr[data-row-showall="0"]{
+		.tbl-toggle {
+			@include sprite('ic-plus-table');
+		}
+	}
+}
+.gdx-table_main {
+	strong {
+		font-size: 15px;
+		font-weight: bold;
+	}
+}
+.gdx-table {
+	//row is minimized - show green arrow down
+	tr[data-row-viewmin="1"]{
+		.tbl-toggle {
+			display: block;
+			@include sprite('ic-arrow-bottom-table');
+		}
+	}
+	//row is expanded - show red arrow up
+	tr[data-row-viewmin="0"]{
+		.tbl-toggle {
+			display: block;
+			@include sprite('ic-arrow-top-table');
+		}
+	}
+}
+@include media-breakpoint-up(md) {
+	.gdx-table {
+		font-size:14px;
+	}
+}
+@for $i from 0 to 15 {
+	.gdx-table[data-table-collapsed="1"][data-items-visible="#{$i}"] {
+		thead {
+			th:nth-child(n+#{$i+1}) {
+				display: none;
+			}
+			th:nth-child(n+#{$i}) {
+				border-right:1px solid #ced4da;
+				border-top-right-radius: 4px;
+			}
+		}
+		tbody, tfoot {
+			td:nth-child(n+#{$i+1}) {
+				grid-column: 1 / #{$i+1};
+				display: none;
+				padding-left:0;
+				margin-left: 45px;
+			}
+			tr[data-row-showall="1"]{
+				td:nth-child(n+#{$i+1}) {
+					display: flex;
+					.gdx-row-title {
+						display: block;
+					}
+					> * {
+						width: 50%;
+					}
+				}
+			}
+			tr[data-row-showall="0"]{
+				td:nth-child(n+#{$i+1}) {
+					display: none;
+				}
+			}
+		}
+
+		tr {
+			grid-template-columns: repeat(#{$i}, 1fr);
+		}
+	}
+}
+
+.gdx-cell-wrapper {
+	order:4;
+}
+
+.treetable {
+	tbody {
+		tr {
+			td:first-child {
+				display: flex;
+				padding-left: 0;
+			}
+		}
+	}
+	.indenter {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		text-align: right;
+		user-select: none;
+		box-sizing: content-box;
+		padding-right:5px;
+	
+		width: 24px;
+		
+		a {
+			display: inline-block;
+			text-decoration: none;
+			width: 24px;
+			height: 24px;
+		}
+	}
+	tr{
+		&.collapsed {
+			.indenter a {
+				@include sprite('ic-arrow-bottom-table');
+			}
+		}
+		&.expanded {
+			.indenter a {
+				@include sprite('ic-arrow-top-table');
+			}
+		}
+		&.branch{
+			.tbl-toggle {
+				display: none;
+			}
+		}
+		&.leaf {
+			.tbl-toggle {
+				position: static;
+				order:2;
+				margin-right: 5px;
+				flex-basis:24px;
+				min-width: 24px;
+			}
+		}
+	}
+	&.gdx-table[data-table-collapsed="1"] {
+		tr.leaf {
+			.tbl-toggle {
+				display: block;
+			}
+			.indenter {
+				display: none;
+			}
+		}
+		@for $j from 0 to 15 {
+			&[data-items-visible="#{$j}"] {
+				tbody, tfoot {
+					tr.branch{
+						&.expanded {
+							td:nth-child(n+#{$j+1}) {
+								display: flex;
+								.gdx-row-title {
+									display: block;
+								}
+							}
+						}
+					}
+					@for $level from 1 to 10 {
+						.level-#{$level} {
+							td:nth-child(n+#{$j+1}) {
+								margin-left: 19px*($level)+29px;
+							}
+							&.leaf {
+								.tbl-toggle {
+									margin-left: 19px*($level);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}

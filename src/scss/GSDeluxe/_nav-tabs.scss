@@ -1,0 +1,84 @@
+// For Launcher Options Only
+@include media-breakpoint-down(lg) {
+	.nav-tabs_launcher-options {
+		margin-right: 1px;
+		.nav-item {
+			flex-basis: 0;
+			-webkit-box-flex: 1;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			text-align: center;
+			margin-right: -1px;
+			min-width: 110px;
+		}
+		.nav-link {
+			border: 1px solid $gray-400;
+			background-color: #fff;
+			color: $gray-700;
+			&:focus,
+			&:hover {
+				border-color: $gray-400;
+				background-color:$body-bg;
+			}
+		}
+		
+		.nav-item.show .nav-link,
+		.nav-link.active {
+			color: $gray-900;
+			border-color: $gray-400 $gray-400 ;
+			background-color:$body-bg;
+		}
+		
+	}
+}
+@media (max-width: 1279px) {
+	.nav-tabs_launcher-options {
+		.nav-link {
+			padding: .5rem .8rem;
+		}
+	}
+}
+// For Others
+@media (max-width: 479px) {
+	.nav-tabs {
+		margin-right: 1px;
+		.nav-item {
+			flex-basis: 0;
+			-webkit-box-flex: 1;
+			-ms-flex-positive: 1;
+			flex-grow: 1;
+			text-align: center;
+			margin-right: -1px;
+			min-width: 110px;
+		}
+		.nav-link {
+			border: 1px solid $gray-400;
+			background-color: #fff;
+			color: $gray-700;
+			height: 100%;
+			&:focus,
+			&:hover {
+				border-color: $gray-400;
+				background-color:$body-bg;
+			}
+		}
+		
+		.nav-item.show .nav-link,
+		.nav-link.active {
+			color: $gray-900;
+			border-color: $gray-400 $gray-400 ;
+			background-color:$body-bg;
+		}
+	}
+}
+.nav-tabs {
+	.nav-item {
+		display: block;
+	}
+	.nav-link {
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

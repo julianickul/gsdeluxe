@@ -1,0 +1,29 @@
+
+
+/* Timepicker */
+.bootstrap-timepicker-widget {
+  table {
+    td {
+      a {
+        &:hover {
+          background-color: transparent;
+          border-color: transparent;
+          border-radius: 4px;
+          color: $primary;
+          text-decoration: none;
+        }
+      }
+      input {
+        border: none;
+      }
+    }
+  }
+
+  &.dropdown-menu:before{
+    border-bottom: 7px solid #e7eef1;
+  }
+  &.timepicker-orient-bottom:before {
+    border-top:7px solid #e7eef1;
+    border-bottom: 0;
+  }
+}

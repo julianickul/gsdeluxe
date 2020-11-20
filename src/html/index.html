@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./blocks/layout/head/_head_common.html')
+
+        <!-- Plugins css -->
+
+        <!-- App css -->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        @@include('./blocks/layout/gsd_sprite.html')
+        <!-- Navigation Bar-->
+        <header id="topnav" class="topnav">
+        @@include('./blocks/layout/topbar.html')
+        @@include('./blocks/layout/horizontal-nav.html')
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+                <div class="page-title-box">
+                    <h4 class="page-title">Список всех страниц</h4>
+                    
+                </div>
+                <div class="card-box">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>Готово</h2>
+                            <ul>
+                                <li><a href="main_testovy_zal.html">Главная без новостей</a></li>
+                                <li><a href="main_news.html">Главная. Новости</a></li>
+                            </ul>
+                            <hr>
+                            <ul>
+                                <li><a href="terminals_ban.html">Terminals ban</a></li>
+                                <li><a href="create_login.html">Create login for terminal</a></li>
+                                <li><a href="change_password.html">Change Password</a></li>
+                                <li><a href="launcher_options.html">Launcher Options</a></li>
+                            </ul>
+                            <hr>
+                            <ul>
+                                <li><a href="add_place.html">Add place</a></li>
+                                <li><a href="add_place_success.html">Add place, created</a></li>
+                                <li><a href="move_place.html">Move place</a></li>
+                            </ul>
+
+                            <hr>
+                            <ul>
+                                <li><a href="add_deposit.html">Add deposit</a></li>
+                                <li><a href="move_deposit.html">Move deposit</a></li>
+                            </ul>
+                            <hr>
+                            <ul>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="money_statistics.html">Money statistics</a></li>
+                            </ul>
+                            <hr>
+                            <ul>
+                                <li><a href="my_jackpots.html">My Jackpots</a></li>
+                                <li><a href="jackpot_group.html">Jackpot groups for Big Display</a></li>
+                                <li><a href="jackpot_history.html">Jackpot History</a></li>
+                                <li><a href="jackpot_list.html">Jackpot List</a></li>
+                            </ul>
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <h2>Комментарии к странице (по работе таблицы)</h2>
+                            <ul>
+                                <li>
+                                    <a href="main.html">Главная</a>
+                                </li>
+                            </ul>
+                            <p>Для реализации иерархической структуры таблицы используются 2 скрипта:</p>
+                            <ul>
+                                <li><a href="http://ludo.cubicphuse.nl/jquery-treetable/" target="_blank">jquery-treetable</a> - Иерархия таблицы</li>
+                                <li><strong>gdx-table</strong> - сворачивание ячеек таблицы, которые не помещаются на экране на малых разрешениях</li>
+                            </ul>
+                            <p>Сначала инициализируется *jquery-treetable*, затем *gdx-table*</p>
+                            <p>На больших разрешениях, когда все ячейки помещаются, отображается только иерархическая структура. 
+                                Если таблица не помещается в размеры экрана, то часть ячеек скрывается. Иконки "стрелки" отображаются, если есть дочерние элементы.
+                                На малых разрешениях, при клике на стрелку открываются скрытые ячейки и дочение элементы. Если дочерних элементов у узла нет, то отображается иконка "+" и открываются скрытые ячейки.
+                            </p>
+                            <p>Для реализации иерархической структуры таблицы, необходимо установить для <strong>tr</strong> data-атрибуты см. документацию к плагину.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end container -->
+        </div> <!-- end wrapper -->
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+        @@include('./blocks/layout/footer.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- App js-->
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>

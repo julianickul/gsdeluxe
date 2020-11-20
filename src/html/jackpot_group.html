@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./blocks/layout/head/_head_common.html')
+
+        <!-- Plugins css -->
+    
+        <!-- App css -->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        @@include('./blocks/layout/gsd_sprite.html')
+        <!-- Navigation Bar-->
+        <header id="topnav" class="topnav">
+            @@include('./blocks/layout/topbar.html')
+            @@include('./blocks/layout/horizontal-nav.html')
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+                @@include('./blocks/breadcrumbs/_jackpot_group.html')
+                <div class="card-box">
+                    <div class="row justify-content-between align-items-center mb-2">
+                        <div class="col-sm-auto">
+                            <h4 class="card-title mb-sm-0">Jackpot groups for Big Display</h4>
+                        </div>
+                        <div class="col-sm-auto text-sm-right">
+                            <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#addGroupModal">Add new group</button>
+                        </div>
+                    </div>
+                    @@include('./blocks/tables/_jackpot_group.html')
+                </div>
+            </div> <!-- end container -->
+        </div><!-- end wrapper -->
+
+        
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+        @@include('./blocks/layout/footer.html')
+        @@include('./blocks/modals/add_new_group.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <script src="assets/js/pages/gdx-table.js"></script>
+        <script src="assets/js/pages/gdx-table.init.js"></script>
+
+        <!-- App js-->
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>

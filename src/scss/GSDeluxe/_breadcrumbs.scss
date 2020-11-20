@@ -1,0 +1,12 @@
+.breadcrumb {
+	font-size: 15px;
+}
+.breadcrumb-item+.breadcrumb-item {
+	padding-left: 0;
+}
+.breadcrumb-item {
+	padding-right: .5rem;
+	&:last-child {
+		padding-right: 0;
+	}
+}

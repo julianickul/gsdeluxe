@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./blocks/layout/head/_head_common.html')
+
+        <!-- Plugins css -->
+    
+        <!-- App css -->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        @@include('./blocks/layout/gsd_sprite.html')
+        <!-- Navigation Bar-->
+        <header id="topnav" class="topnav">
+            @@include('./blocks/layout/topbar.html')
+            @@include('./blocks/layout/horizontal-nav.html')
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="wrapper">
+            <div class="container-fluid">
+                @@include('./blocks/breadcrumbs/_create_login.html')
+
+                @@include('./blocks/forms/_create_login.html')
+                
+            </div> <!-- end container -->
+        </div><!-- end wrapper -->
+
+        
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+        @@include('./blocks/layout/footer.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- App js-->
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>

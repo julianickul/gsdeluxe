@@ -1,0 +1,10 @@
+@mixin sprite($img, $bgsize: cover) {
+	background-image: url('../images/sprite.svg#' + $img);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: $bgsize;
+}
+
+@mixin spriteImg($img) {
+	background-image: url('../images/sprite.svg#' + $img);
+}

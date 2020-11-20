@@ -1,0 +1,48 @@
+<form class="row justify-content-between align-items-end">
+	<div class="col col-md-10 form-row">
+		<div class="col-sm-6 col-lg-3">
+			<div class="form-row">
+				<div class="form-group col-7">
+					<label for="fromDate" class="col-form-label">Period from</label>
+					<input type="text" class="form-control form-control-sm" id="fromDate" value="" placeholder="dd.mm.yyyy">
+				</div>
+				<div class="form-group col-5">
+					<label class="col-form-label" for="fromTime">&nbsp;</label>
+					<input type="text" class="form-control form-control-sm" id="fromTime" placeholder="hh:mm">
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-sm-6 col-lg-3">
+			<div class="form-row">
+				<div class="form-group col-7">
+					<label for="toDate" class="col-form-label">To</label>
+					<input type="text" class="form-control form-control-sm" id="toDate" value="" placeholder="dd.mm.yyyy">
+				</div>
+				<div class="form-group col-5">
+					<label class="col-form-label" for="toTime">&nbsp;</label>
+					<input type="text" class="form-control form-control-sm" id="toTime" placeholder="hh:mm">
+				</div>
+			</div>
+		</div>
+		
+		<div class="form-group col-sm-6 col-lg-3">
+			<label for="" class="col-form-label">Group by period</label>
+			<select class="custom-select custom-select-sm">
+				<option>By Place</option>
+				<option>By Place 1</option>
+			</select>
+		</div>
+		<div class="form-group col-sm-6 col-lg-3">
+			<label for="" class="col-form-label">Group hour</label>
+			<select class="custom-select custom-select-sm">
+				<option>01</option>
+				<option>02</option>
+				<option selected="selected">21</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group col-sm-auto col-md-2 col-lg-auto text-center text-md-right">
+		<button type="submit" class="btn btn-sm btn-primary w-100">Select</button>
+	</div>
+</form>

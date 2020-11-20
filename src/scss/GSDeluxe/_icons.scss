@@ -1,0 +1,49 @@
+.navigation-menu > li > a {
+	.gxd-icon {
+		width: 24px;
+		height: 24px;
+		fill:#6c757d;
+		vertical-align: middle;
+		transition: all .3s ease;
+	}
+}
+
+.navigation-menu > li.active > a,
+.navigation-menu > li.open > a,
+.navigation-menu > li:hover,
+.navigation-menu > li > a:hover {
+	.gxd-icon {
+		fill:#51a7ff;
+	}
+}
+.nav-user .gxd-icon {
+	width: 28px;
+	height: 28px;
+}
+
+.gdx-icon-append {
+	position: relative;
+	padding-right: 30px;
+	display: inline-block;
+	.gdx-icon__box {
+		position: absolute;
+		z-index: 1;
+		right:0;
+		top:50%;
+		margin-top: -12px;
+		display: block;
+	}
+	.gdx-icon {
+		width:24px;
+		height:24px;
+	}
+}
+
+.gdx-ico_search {
+	@include sprite('ic-search-white');
+	width:32px;
+}
+.gdx-ico_go {
+	@include sprite('ic-go-white');
+	width:32px;
+}
