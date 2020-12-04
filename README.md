@@ -1,5 +1,7 @@
 # Верстка - GSDeluxe основана на теме Adminto_v3.1
 
+Доступно для просмотра на https://julianickul.github.io/gsdeluxe/
+
 ## Используемые технологии
 * Gulp 
 * SCSS
